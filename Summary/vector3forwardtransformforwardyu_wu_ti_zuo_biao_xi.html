@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>旋转 | Unity Source Book</title>
+        <title>Vector3.forward、transform.forward与物体坐标系、世界坐标系间的联系 | Unity Source Book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -45,10 +45,10 @@
         
     
     
-    <link rel="next" href="../UnityClass/scale.html" />
+    <link rel="next" href="../Summary/gameobjectyu_component_de_guan_xi.html" />
     
     
-    <link rel="prev" href="../UnityClass/translate.html" />
+    <link rel="prev" href="../Summary/dui_unity_de_zheng_ti_ren_shi.html" />
     
 
         <!-- head:end -->
@@ -57,9 +57,9 @@
         <!-- body:start -->
         
     <div class="book"
-        data-level="3.5.2"
-        data-chapter-title="旋转"
-        data-filepath="UnityClass/rotate.md"
+        data-level="15.8"
+        data-chapter-title="Vector3.forward、transform.forward与物体坐标系、世界坐标系间的联系"
+        data-filepath="Summary/vector3forwardtransformforwardyu_wu_ti_zuo_biao_xi.md"
         data-basepath=".."
         data-revision="Thu Mar 10 2016 00:39:46 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
@@ -287,7 +287,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.5.2" data-path="UnityClass/rotate.html">
+        <li class="chapter " data-level="3.5.2" data-path="UnityClass/rotate.html">
             
                 
                     <a href="../UnityClass/rotate.html">
@@ -756,7 +756,7 @@
             
         </li>
     
-        <li class="chapter " data-level="15.8" data-path="Summary/vector3forwardtransformforwardyu_wu_ti_zuo_biao_xi.html">
+        <li class="chapter active" data-level="15.8" data-path="Summary/vector3forwardtransformforwardyu_wu_ti_zuo_biao_xi.html">
             
                 
                     <a href="../Summary/vector3forwardtransformforwardyu_wu_ti_zuo_biao_xi.html">
@@ -853,47 +853,7 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x65CB;&#x8F6C;">&#x65CB;&#x8F6C;</h1>
-<h2 id="&#x5982;&#x4F55;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x65CB;&#x8F6C;">&#x5982;&#x4F55;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x65CB;&#x8F6C;</h2>
-<ul>
-<li>Unity&#x4E2D;&#x6709;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x8868;&#x8FF0;&#x4E00;&#x4E2A;&#x65CB;&#x8F6C;&#x5206;&#x522B;&#x662F;&#xFF1A;<ul>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</li>
-<li>Unity&#x4E2D;&#x4E3B;&#x8981;&#x7528;&#x56DB;&#x5143;&#x6570;&#x8868;&#x793A;&#x65CB;&#x8F6C;</li>
-<li>&#x6B27;&#x62C9;&#x89D2;&#x548C;&#x8F74;&#x89D2;&#x5BF9;&#x90FD;&#x53EF;&#x4EE5;&#x8F6C;&#x6210;&#x56DB;&#x5143;&#x6570;<pre><code>  &#xFF08;&#x4EE3;&#x7801;&#x548C;&#x6CE8;&#x91CA;&#xFF09;
-</code></pre></li>
-</ul>
-<h2 id="&#x65CB;&#x8F6C;&#x7269;&#x4F53;">&#x65CB;&#x8F6C;&#x7269;&#x4F53;</h2>
-<ul>
-<li>&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;&#x7528;rotation&#x3001;loclaRotation&#x5C5E;&#x6027;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;&#x65CB;&#x8F6C;&#x503C;&#xFF1B;&#x4F7F;&#x7528;Rotate&#x65B9;&#x6CD5;&#x8BBE;&#x7F6E;&#x65CB;&#x8F6C;&#x7684;&#x504F;&#x79FB;&#x91CF;&#xFF1B;<pre><code>  &#xFF08;&#x4EE3;&#x7801;&#x548C;&#x6CE8;&#x91CA;&#xFF09;
-</code></pre></li>
-<li>rotation&#x4E0E;localRotation&#x7684;&#x533A;&#x522B;&#xFF1A;</li>
-<li>&#x5728;&#x68C0;&#x89C6;&#x9762;&#x677F;&#x4E2D;&#xFF0C;Transform&#x7EC4;&#x5EFA;&#x7684;Rotation&#x6307;&#x7684;&#x662F;&#x7269;&#x4F53;&#x7684;localRotation&#x3002;</li>
-</ul>
-<h2 id="&#x671D;&#x5411;&#x76EE;&#x6807;">&#x671D;&#x5411;&#x76EE;&#x6807;</h2>
-<ul>
-<li>&#x4F7F;&#x7528;LookAt&#x65B9;&#x6CD5;<pre><code>  &#xFF08;&#x4EE3;&#x7801;&#x548C;&#x6CE8;&#x91CA;&#xFF09;
-</code></pre></li>
-<li>&#x6709;&#x65F6;&#x6211;&#x4EEC;&#x8981;&#x671D;&#x5411;&#x76EE;&#x6807;&#x65F6;&#x7684;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Quaternion.LookRotation()<pre><code>  &#xFF08;&#x4EE3;&#x7801;&#x548C;&#x6CE8;&#x91CA;&#xFF09;
-</code></pre></li>
-<li>&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x7ED9;&#x7684;&#x53C2;&#x6570;xxx</li>
-</ul>
-<h2 id="&#x56F4;&#x7ED5;&#x76EE;&#x6807;&#x65CB;&#x8F6C;">&#x56F4;&#x7ED5;&#x76EE;&#x6807;&#x65CB;&#x8F6C;</h2>
-<ul>
-<li>&#x56F4;&#x7ED5;&#x76EE;&#x6807;&#x65CB;&#x8F6C;&#x662F;&#x4E00;&#x4E2A;&#x4EFF;&#x5C04;&#x53D8;&#x5316;&#x3002;</li>
-<li>&#x5B9E;&#x73B0;&#x7684;&#x51FD;&#x6570;&#x3001;&#x53C2;&#x6570;&#x7684;&#x610F;&#x4E49;&#xFF08;&#x6CE8;&#x660E;&#x5750;&#x6807;&#x7CFB;&#xFF09;&#x3002;</li>
-<li>&#x76EE;&#x6807;&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x4FDD;&#x6301;&#x76F8;&#x5BF9;&#x4F4D;&#x7F6E;&#x4E0D;&#x53D8;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x7269;&#x4F53;&#x8BBE;&#x7F6E;&#x4E3A;&#x76EE;&#x6807;&#x7684;&#x5B50;&#x7269;&#x4F53;&#x3002;</li>
-<li><p>Demo &#x592A;&#x9633;&#x7CFB;&#xFF08;&#x6700;&#x597D;&#x6709;&#x6750;&#x8D28;&#x548C;&#x622A;&#x56FE;&#xFF09;</p>
-<pre><code class="lang-Earth&#x811A;&#x672C;">
-
-</code></pre>
-<pre><code class="lang-Moon&#x811A;&#x672C;"> 
-</code></pre>
-</li>
-</ul>
+                        <h1 id="vector3forward&#x3001;transformforward&#x4E0E;&#x7269;&#x4F53;&#x5750;&#x6807;&#x7CFB;&#x3001;&#x4E16;&#x754C;&#x5750;&#x6807;&#x7CFB;&#x95F4;&#x7684;&#x8054;&#x7CFB;">Vector3.forward&#x3001;transform.forward&#x4E0E;&#x7269;&#x4F53;&#x5750;&#x6807;&#x7CFB;&#x3001;&#x4E16;&#x754C;&#x5750;&#x6807;&#x7CFB;&#x95F4;&#x7684;&#x8054;&#x7CFB;</h1>
 
                     
                     </section>
@@ -904,10 +864,10 @@
         </div>
 
         
-        <a href="../UnityClass/translate.html" class="navigation navigation-prev " aria-label="Previous page: 移动"><i class="fa fa-angle-left"></i></a>
+        <a href="../Summary/dui_unity_de_zheng_ti_ren_shi.html" class="navigation navigation-prev " aria-label="Previous page: 对Unity的整体认识"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../UnityClass/scale.html" class="navigation navigation-next " aria-label="Next page: 缩放"><i class="fa fa-angle-right"></i></a>
+        <a href="../Summary/gameobjectyu_component_de_guan_xi.html" class="navigation navigation-next " aria-label="Next page: GameObject与Component的关系"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
