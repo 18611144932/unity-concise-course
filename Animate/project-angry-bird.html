@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Transform | Unity Source Book</title>
+        <title>项目实战-愤怒的小鸟 | Unity Source Book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -45,10 +45,10 @@
         
     
     
-    <link rel="next" href="../UnityClass/translate.html" />
+    <link rel="next" href="../renderer.html" />
     
     
-    <link rel="prev" href="../UnityClass/resources.html" />
+    <link rel="prev" href="../Animate/animation.html" />
     
 
         <!-- head:end -->
@@ -57,9 +57,9 @@
         <!-- body:start -->
         
     <div class="book"
-        data-level="3.5"
-        data-chapter-title="Transform"
-        data-filepath="UnityClass/transform.md"
+        data-level="6.3"
+        data-chapter-title="项目实战-愤怒的小鸟"
+        data-filepath="Animate/project-angry-bird.md"
         data-basepath=".."
         data-revision="Sun Mar 13 2016 02:24:13 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
@@ -256,7 +256,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.5" data-path="UnityClass/transform.html">
+        <li class="chapter " data-level="3.5" data-path="UnityClass/transform.html">
             
                 
                     <a href="../UnityClass/transform.html">
@@ -594,7 +594,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.3" data-path="Animate/project-angry-bird.html">
+        <li class="chapter active" data-level="6.3" data-path="Animate/project-angry-bird.html">
             
                 
                     <a href="../Animate/project-angry-bird.html">
@@ -992,7 +992,91 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="transform">Transform</h1>
+                        <h1 id="&#x9879;&#x76EE;&#x5B9E;&#x6218;&#x6124;&#x6012;&#x7684;&#x5C0F;&#x9E1F;">&#x9879;&#x76EE;&#x5B9E;&#x6218;-&#x6124;&#x6012;&#x7684;&#x5C0F;&#x9E1F;</h1>
+<h2 id="&#x52A8;&#x753B;">&#x52A8;&#x753B;</h2>
+<ul>
+<li>&#x642D;&#x5EFA;&#x573A;&#x666F;</li>
+<li>&#x8868;&#x60C5;&#x52A8;&#x753B;</li>
+<li>&#x5728;&#x5929;&#x7A7A;&#x98DE;&#x7FD4;&#x7684;&#x5C0F;&#x9E1F;</li>
+<li>&#x5929;&#x7A7A;&#x548C;&#x5730;&#x9762;&#x7684;&#x4E24;&#x53EA;&#x9E1F;&#x505A;&#x4E0D;&#x540C;&#x7684;&#x52A8;&#x753B;&#x3002;&#x5730;&#x9762;&#x7684;&#x5C0F;&#x9E1F;&#x8DF3;&#x4E0A;&#x5F39;&#x5F13;&#x3002;</li>
+</ul>
+<h2 id="&#x53D1;&#x5C04;&#x5C0F;&#x9E1F;">&#x53D1;&#x5C04;&#x5C0F;&#x9E1F;</h2>
+<ul>
+<li>&#x5224;&#x65AD;&#x662F;&#x5426;&#x9009;&#x4E2D;&#x4E86;&#x5C0F;&#x9E1F;&#x3002;</li>
+<li>&#x62D6;&#x52A8;&#x5C0F;&#x9E1F;&#x3002;</li>
+<li>&#x5BB9;&#x9519;&#xFF1A;&#x5F53;&#x62D6;&#x52A8;&#x8DDD;&#x79BB;&#x975E;&#x5E38;&#x5C0F;&#x65F6;&#x5FFD;&#x7565;&#x62D6;&#x52A8;&#x3002;</li>
+<li>&#x8BA1;&#x7B97;&#x53D1;&#x5C04;&#x5411;&#x91CF;&#x3002;</li>
+<li>&#x9650;&#x5B9A;&#x6253;&#x52A8;&#x7684;&#x6700;&#x5927;&#x8DDD;&#x79BB;&#x3002;</li>
+<li>&#x6DFB;&#x52A0;2D&#x521A;&#x4F53;&#x548C;&#x78B0;&#x649E;&#x4F53;&#x3002;</li>
+<li>&#x7ED9;&#x521A;&#x4F53;&#x52A0;&#x529B;&#x628A;&#x5C0F;&#x9E1F;&#x53D1;&#x5C04;&#x51FA;&#x53BB;&#x3002;</li>
+<li>&#x6DFB;&#x52A0;&#x843D;&#x5730;&#x65F6;&#x7684;&#x5F39;&#x6027;&#x3002;</li>
+</ul>
+<blockquote>
+<p><a name="Shoot.cs" href="Shoot.cs">Shoot.cs</a></p>
+</blockquote>
+<pre><code class="lang-text">using UnityEngine;
+using System.Collections;
+
+public class Shoot : MonoBehaviour {
+
+    Vector2 start;
+    Transform shootPoint;
+    bool selected = false;
+
+    // Use this for initialization
+    void Start () {
+        shootPoint = GameObject.Find (&quot;ShootPoint&quot;).transform;
+    }
+
+    // Update is called once per frame
+    void Update () {
+        // &#x8BA1;&#x7B97;&#x4E16;&#x754C;&#x5750;&#x6807;&#x7CFB;&#x4E2D;&#x9F20;&#x6807;&#x7684;&#x4F4D;&#x7F6E;
+        // &#x5C06;&#x9F20;&#x6807;&#x4F4D;&#x7F6E;&#x7684;&#x5C4F;&#x5E55;&#x5750;&#x6807;&#x8F6C;&#x4E3A;&#x4E16;&#x754C;&#x5750;&#x6807;
+        Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // &#x5FFD;&#x7565;z&#x8F74;
+        mouse.z = 0;
+
+        // &#x5224;&#x65AD;&#x662F;&#x5426;&#x9009;&#x4E2D;&#x4E86;&#x5C0F;&#x9E1F;
+        if (Input.GetMouseButtonDown (0)) {
+            Vector3 delta = shootPoint.position - mouse;
+            if (delta.magnitude &lt; 0.4f) {
+                // Selected
+                selected = true;
+            }
+        }
+
+        // &#x62D6;&#x52A8;&#x5C0F;&#x9E1F;
+        if (selected &amp;&amp; Input.GetMouseButton (0)) {
+            // &#x8BA1;&#x7B97;&#x53D1;&#x5C04;&#x70B9;&#x5230;&#x9F20;&#x6807;&#x7684;&#x504F;&#x79FB;&#x5411;&#x91CF;
+            Vector3 delta = mouse - shootPoint.position;
+            // &#x9650;&#x5B9A;&#x6700;&#x5927;&#x504F;&#x79FB;
+            if (delta.magnitude &gt; 1.2f)
+                delta = delta.normalized * 1.2f;
+
+            // &#x5C0F;&#x9E1F;&#x7684;&#x4F4D;&#x7F6E;&#x8BBE;&#x7F6E;&#x4E3A;&#x53D1;&#x5C04;&#x70B9;&#x4F4D;&#x7F6E;&#xFF0B;&#x504F;&#x79FB;&#x5411;&#x91CF;
+            transform.position = shootPoint.position + delta;
+        }
+
+        // &#x53D1;&#x5C04;&#x5C0F;&#x9E1F;
+        if (selected &amp;&amp; Input.GetMouseButtonUp (0)) {
+            // &#x8BA1;&#x7B97;&#x53D1;&#x5C04;&#x5411;&#x91CF;
+            Vector3 delta = shootPoint.position - transform.position;
+
+            // &#x7ED9;&#x521A;&#x4F53;&#x52A0;&#x529B;&#x628A;&#x5C0F;&#x9E1F;&#x53D1;&#x5C04;&#x51FA;&#x53BB;
+            rigidbody2D.AddForce (delta * 300f);
+//            rigidbody2D.velocity = delta * 2;
+            // &#x6062;&#x590D;&#x91CD;&#x529B;
+            rigidbody2D.gravityScale = 1;
+
+            // &#x91CA;&#x653E;&#x5C0F;&#x9E1F;&#x9009;&#x4E2D;
+            selected = false;
+        }
+
+
+    }
+
+}
+</code></pre>
 
                     
                     </section>
@@ -1003,10 +1087,10 @@
         </div>
 
         
-        <a href="../UnityClass/resources.html" class="navigation navigation-prev " aria-label="Previous page: Resources"><i class="fa fa-angle-left"></i></a>
+        <a href="../Animate/animation.html" class="navigation navigation-prev " aria-label="Previous page: 帧动画"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../UnityClass/translate.html" class="navigation navigation-next " aria-label="Next page: 移动"><i class="fa fa-angle-right"></i></a>
+        <a href="../renderer.html" class="navigation navigation-next " aria-label="Next page: 显示组件 Renderer"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

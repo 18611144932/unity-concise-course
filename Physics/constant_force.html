@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Unity中的类 | Unity Source Book</title>
+        <title>静态力场 Constant Force | Unity Source Book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-comment/plugin.css">
+        
+    
+        
         <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
         
     
@@ -41,10 +45,10 @@
         
     
     
-    <link rel="next" href="../UnityClass/monobehaviour.html" />
+    <link rel="next" href="../Physics/collider.html" />
     
     
-    <link rel="prev" href="../3DMath/readme.html" />
+    <link rel="prev" href="../Physics/rigidbody.html" />
     
 
         <!-- head:end -->
@@ -53,11 +57,11 @@
         <!-- body:start -->
         
     <div class="book"
-        data-level="3"
-        data-chapter-title="Unity中的类"
-        data-filepath="UnityClass/readme.md"
+        data-level="5.2"
+        data-chapter-title="静态力场 Constant Force"
+        data-filepath="Physics/constant_force.md"
         data-basepath=".."
-        data-revision="Wed Mar 09 2016 17:45:05 GMT+0800 (中国标准时间)"
+        data-revision="Sun Mar 13 2016 02:24:13 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
     
 
@@ -136,17 +140,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2" data-path="3DMath/readme.html">
+        <li class="chapter " data-level="2" >
             
-                
-                    <a href="../3DMath/readme.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.</b>
-                        
-                        3D数学基础
-                    </a>
+            <span><b>2.</b> 3D数学基础</span>
             
             
             <ul class="articles">
@@ -192,30 +188,37 @@
             
         </li>
     
-        <li class="chapter active" data-level="3" data-path="UnityClass/readme.html">
+        <li class="chapter " data-level="3" >
             
-                
-                    <a href="../UnityClass/readme.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.</b>
-                        
-                        Unity中的类
-                    </a>
+            <span><b>3.</b> Unity中的类</span>
             
             
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1" data-path="UnityClass/monobehaviour.html">
+        <li class="chapter " data-level="3.1" data-path="UnityClass/component.html">
+            
+                
+                    <a href="../UnityClass/component.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Component
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="UnityClass/monobehaviour.html">
             
                 
                     <a href="../UnityClass/monobehaviour.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.1.</b>
+                            <b>3.2.</b>
                         
                         MonoBehaviour
                     </a>
@@ -223,14 +226,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="UnityClass/gameobject.html">
+        <li class="chapter " data-level="3.3" data-path="UnityClass/gameobject.html">
             
                 
                     <a href="../UnityClass/gameobject.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.2.</b>
+                            <b>3.3.</b>
                         
                         GameObject
                     </a>
@@ -238,14 +241,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="UnityClass/resources.html">
+        <li class="chapter " data-level="3.4" data-path="UnityClass/resources.html">
             
                 
                     <a href="../UnityClass/resources.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.3.</b>
+                            <b>3.4.</b>
                         
                         Resources
                     </a>
@@ -253,14 +256,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="UnityClass/transform.html">
+        <li class="chapter " data-level="3.5" data-path="UnityClass/transform.html">
             
                 
                     <a href="../UnityClass/transform.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.4.</b>
+                            <b>3.5.</b>
                         
                         Transform
                     </a>
@@ -269,14 +272,14 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.4.1" data-path="UnityClass/translate.html">
+        <li class="chapter " data-level="3.5.1" data-path="UnityClass/translate.html">
             
                 
                     <a href="../UnityClass/translate.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.4.1.</b>
+                            <b>3.5.1.</b>
                         
                         移动
                     </a>
@@ -284,14 +287,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.2" data-path="UnityClass/rotate.html">
+        <li class="chapter " data-level="3.5.2" data-path="UnityClass/rotate.html">
             
                 
                     <a href="../UnityClass/rotate.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.4.2.</b>
+                            <b>3.5.2.</b>
                         
                         旋转
                     </a>
@@ -299,14 +302,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.3" data-path="UnityClass/scale.html">
+        <li class="chapter " data-level="3.5.3" data-path="UnityClass/scale.html">
             
                 
                     <a href="../UnityClass/scale.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.4.3.</b>
+                            <b>3.5.3.</b>
                         
                         缩放
                     </a>
@@ -314,14 +317,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.4" data-path="UnityClass/parent.html">
+        <li class="chapter " data-level="3.5.4" data-path="UnityClass/parent.html">
             
                 
                     <a href="../UnityClass/parent.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.4.4.</b>
+                            <b>3.5.4.</b>
                         
                         物体间的层次关系
                     </a>
@@ -334,14 +337,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="UnityClass/time.html">
+        <li class="chapter " data-level="3.6" data-path="UnityClass/time.html">
             
                 
                     <a href="../UnityClass/time.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.5.</b>
+                            <b>3.6.</b>
                         
                         Time
                     </a>
@@ -349,14 +352,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.6" data-path="UnityClass/input.html">
+        <li class="chapter " data-level="3.7" data-path="UnityClass/input.html">
             
                 
                     <a href="../UnityClass/input.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.6.</b>
+                            <b>3.7.</b>
                         
                         Input
                     </a>
@@ -364,24 +367,17 @@
             
         </li>
     
-        <li class="chapter " data-level="3.7" data-path="UnityClass/object.html">
+        <li class="chapter " data-level="3.8" data-path="UnityClass/object.html">
             
                 
                     <a href="../UnityClass/object.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.7.</b>
+                            <b>3.8.</b>
                         
                         Object
                     </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.8" >
-            
-            <span><b>3.8.</b> Component</span>
             
             
         </li>
@@ -408,7 +404,7 @@
                         
                             <b>4.1.</b>
                         
-                        协同Coroutine
+                        协同 Coroutine
                     </a>
             
             
@@ -457,14 +453,29 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="Physics/collider.html">
+        <li class="chapter active" data-level="5.2" data-path="Physics/constant_force.html">
+            
+                
+                    <a href="../Physics/constant_force.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        静态力场 Constant Force
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="Physics/collider.html">
             
                 
                     <a href="../Physics/collider.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.2.</b>
+                            <b>5.3.</b>
                         
                         碰撞体 Collider
                     </a>
@@ -472,14 +483,14 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="Physics/ray.html">
+        <li class="chapter " data-level="5.4" data-path="Physics/ray.html">
             
                 
                     <a href="../Physics/ray.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.3.</b>
+                            <b>5.4.</b>
                         
                         射线 Ray
                     </a>
@@ -487,14 +498,14 @@
             
         </li>
     
-        <li class="chapter " data-level="5.4" data-path="cloth.html">
+        <li class="chapter " data-level="5.5" data-path="Physics/cloth.html">
             
                 
-                    <a href="../cloth.html">
+                    <a href="../Physics/cloth.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.4.</b>
+                            <b>5.5.</b>
                         
                         布料 Cloth
                     </a>
@@ -502,14 +513,14 @@
             
         </li>
     
-        <li class="chapter " data-level="5.5" data-path="joint.html">
+        <li class="chapter " data-level="5.6" data-path="Physics/joint.html">
             
                 
-                    <a href="../joint.html">
+                    <a href="../Physics/joint.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.5.</b>
+                            <b>5.6.</b>
                         
                         关节 Joint
                     </a>
@@ -517,14 +528,14 @@
             
         </li>
     
-        <li class="chapter " data-level="5.6" data-path="Physics/project-3d-hit-plane.html">
+        <li class="chapter " data-level="5.7" data-path="Physics/project-3d-hit-plane.html">
             
                 
                     <a href="../Physics/project-3d-hit-plane.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.6.</b>
+                            <b>5.7.</b>
                         
                         项目实战-3D打飞机
                     </a>
@@ -537,17 +548,91 @@
             
         </li>
     
-        <li class="chapter " data-level="6" >
+        <li class="chapter " data-level="6" data-path="Animate/readme.html">
             
-            <span><b>6.</b> 组件</span>
+                
+                    <a href="../Animate/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        动作系统
+                    </a>
             
             
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="6.1" >
+        <li class="chapter " data-level="6.1" data-path="Animate/2dgame.html">
             
-            <span><b>6.1.</b> 显示组件 Render</span>
+                
+                    <a href="../Animate/2dgame.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        2D游戏开发
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="Animate/animation.html">
+            
+                
+                    <a href="../Animate/animation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        帧动画
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="Animate/project-angry-bird.html">
+            
+                
+                    <a href="../Animate/project-angry-bird.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        项目实战-愤怒的小鸟
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+            <span><b>6.4.</b> 动画状态机</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" >
+            
+            <span><b>6.5.</b> 3D动画</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" >
+            
+            <span><b>6.6.</b> 层动画</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" >
+            
+            <span><b>6.7.</b> Blend动画</span>
             
             
         </li>
@@ -559,57 +644,85 @@
     
         <li class="chapter " data-level="7" >
             
-            <span><b>7.</b> 动作系统</span>
+            <span><b>7.</b> 组件</span>
             
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" >
+            
+            <span><b>7.1.</b> 摄像机 Camera</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="renderer.html">
+            
+                
+                    <a href="../renderer.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        显示组件 Renderer
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" >
+            
+            <span><b>7.3.</b> 粒子系统</span>
+            
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
         <li class="chapter " data-level="8" >
             
-            <span><b>8.</b> 粒子系统</span>
+            <span><b>8.</b> UI</span>
             
             
         </li>
     
         <li class="chapter " data-level="9" >
             
-            <span><b>9.</b> UI</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10" >
-            
-            <span><b>10.</b> 数据持久化</span>
+            <span><b>9.</b> 数据持久化</span>
             
             
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="10.1" >
+        <li class="chapter " data-level="9.1" >
             
-            <span><b>10.1.</b> IO流</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.2" >
-            
-            <span><b>10.2.</b> 序列化与反序列化</span>
+            <span><b>9.1.</b> IO流</span>
             
             
         </li>
     
-        <li class="chapter " data-level="10.3" >
+        <li class="chapter " data-level="9.2" >
             
-            <span><b>10.3.</b> XML</span>
+            <span><b>9.2.</b> 序列化与反序列化</span>
             
             
         </li>
     
-        <li class="chapter " data-level="10.4" >
+        <li class="chapter " data-level="9.3" >
             
-            <span><b>10.4.</b> JSON</span>
+            <span><b>9.3.</b> XML</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" >
+            
+            <span><b>9.4.</b> JSON</span>
             
             
         </li>
@@ -619,31 +732,31 @@
             
         </li>
     
+        <li class="chapter " data-level="10" >
+            
+            <span><b>10.</b> 网络</span>
+            
+            
+        </li>
+    
         <li class="chapter " data-level="11" >
             
-            <span><b>11.</b> 网络</span>
+            <span><b>11.</b> AI</span>
             
             
         </li>
     
         <li class="chapter " data-level="12" >
             
-            <span><b>12.</b> AI</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="13" >
-            
-            <span><b>13.</b> 游戏框架</span>
+            <span><b>12.</b> 游戏框架</span>
             
             
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="13.1" >
+        <li class="chapter " data-level="12.1" >
             
-            <span><b>13.1.</b> 模块间通信</span>
+            <span><b>12.1.</b> 模块间通信</span>
             
             
         </li>
@@ -653,17 +766,37 @@
             
         </li>
     
-        <li class="chapter " data-level="14" >
+        <li class="chapter " data-level="13" >
             
-            <span><b>14.</b> 常用插件</span>
+            <span><b>13.</b> 常用插件</span>
             
             
         </li>
     
-        <li class="chapter " data-level="15" data-path="总结/zongjie_md.html">
+        <li class="chapter " data-level="14" data-path="项目实战/readme.html">
+            
+            <span><b>14.</b> 项目实战</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1" >
+            
+            <span><b>14.1.</b> Unity官方案例介绍</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="Summary/readme.html">
             
                 
-                    <a href="../总结/zongjie_md.html">
+                    <a href="../Summary/readme.html">
                 
                         <i class="fa fa-check"></i>
                         
@@ -676,92 +809,153 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="15.1" >
+        <li class="chapter " data-level="15.1" data-path="Summary/awesome.html">
             
-            <span><b>15.1.</b> Unity中的常用快捷键及使用技巧</span>
+                
+                    <a href="../Summary/awesome.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.1.</b>
+                        
+                        Awesome
+                    </a>
             
             
         </li>
     
         <li class="chapter " data-level="15.2" >
             
-            <span><b>15.2.</b> MonoDevelop中的常用快捷键及使用技巧</span>
+            <span><b>15.2.</b> Unity中的常用快捷键及使用技巧</span>
             
             
         </li>
     
         <li class="chapter " data-level="15.3" >
             
-            <span><b>15.3.</b> VS中的常用快捷键及使用技巧</span>
+            <span><b>15.3.</b> MonoDevelop中的常用快捷键及使用技巧</span>
             
             
         </li>
     
         <li class="chapter " data-level="15.4" >
             
-            <span><b>15.4.</b> 实现等待</span>
+            <span><b>15.4.</b> VS中的常用快捷键及使用技巧</span>
             
             
         </li>
     
-        <li class="chapter " data-level="15.5" >
+        <li class="chapter " data-level="15.5" data-path="Summary/dui_unity_de_zheng_ti_ren_shi.html">
             
-            <span><b>15.5.</b> 控制物体移动的几种方式</span>
+                
+                    <a href="../Summary/dui_unity_de_zheng_ti_ren_shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.5.</b>
+                        
+                        对Unity的整体认识
+                    </a>
             
             
         </li>
     
         <li class="chapter " data-level="15.6" >
             
-            <span><b>15.6.</b> 刚体与碰撞体间的联系</span>
+            <span><b>15.6.</b> 实现等待</span>
             
             
         </li>
     
         <li class="chapter " data-level="15.7" >
             
-            <span><b>15.7.</b> Vector3.forward、transform.forward与物体坐标系、世界坐标系间的联系</span>
+            <span><b>15.7.</b> 控制物体移动的几种方式</span>
             
             
         </li>
     
-
-            </ul>
+        <li class="chapter " data-level="15.8" >
             
-        </li>
-    
-        <li class="chapter " data-level="16" data-path="项目实战/readme.html">
-            
-            <span><b>16.</b> 项目实战</span>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="16.1" >
-            
-            <span><b>16.1.</b> Unity官方案例介绍</span>
+            <span><b>15.8.</b> 刚体与碰撞体间的联系</span>
             
             
         </li>
     
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="17" data-path="awesome.html">
+        <li class="chapter " data-level="15.9" data-path="Summary/vector3forwardtransformforwardyu_wu_ti_zuo_biao_xi.html">
             
                 
-                    <a href="../awesome.html">
+                    <a href="../Summary/vector3forwardtransformforwardyu_wu_ti_zuo_biao_xi.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>17.</b>
+                            <b>15.9.</b>
                         
-                        Awesome
+                        Vector3.forward、transform.forward与坐标系间的联系
                     </a>
             
+            
+        </li>
+    
+        <li class="chapter " data-level="15.10" data-path="Summary/gameobjectyu_component_de_guan_xi.html">
+            
+                
+                    <a href="../Summary/gameobjectyu_component_de_guan_xi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.10.</b>
+                        
+                        GameObject与Component的关系
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15.11" >
+            
+            <span><b>15.11.</b> 顺序加载脚本</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15.12" >
+            
+            <span><b>15.12.</b> 2D射线</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15.13" >
+            
+            <span><b>15.13.</b> 动态创建地形</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15.14" data-path="Summary/Lerp.html">
+            
+                
+                    <a href="../Summary/Lerp.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.14.</b>
+                        
+                        插值与平滑
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15.15" >
+            
+            <span><b>15.15.</b> 坐标系转化</span>
+            
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -798,7 +992,23 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="unity&#x4E2D;&#x7684;&#x7C7B;">Unity&#x4E2D;&#x7684;&#x7C7B;</h1>
+                        <h1 id="&#x9759;&#x6001;&#x529B;&#x573A;-constant-force">&#x9759;&#x6001;&#x529B;&#x573A; Constant Force</h1>
+<h2 id="&#x9759;&#x6001;&#x529B;&#x573A;&#x7684;&#x4F5C;&#x7528;">&#x9759;&#x6001;&#x529B;&#x573A;&#x7684;&#x4F5C;&#x7528;</h2>
+<ul>
+<li>&#x9759;&#x6001;&#x529B;&#x573A;&#x53EF;&#x4EE5;&#x6301;&#x7EED;&#x7ED9;&#x7269;&#x4F53;&#x65BD;&#x52A0;&#x4E00;&#x4E2A;&#x529B;&#x3002;</li>
+<li>&#x53EF;&#x4EE5;&#x65BD;&#x52A0;&#x63A8;&#x529B;&#x4E5F;&#x53EF;&#x4EE5;&#x65BD;&#x52A0;&#x4F7F;&#x7269;&#x4F53;&#x65CB;&#x8F6C;&#x7684;&#x626D;&#x529B;&#x3002;</li>
+<li>&#x8868;&#x793A;&#x529B;&#x65B9;&#x5411;&#x548C;&#x5927;&#x5C0F;&#x7684;&#x5411;&#x91CF;&#x53EF;&#x4EE5;&#x76F8;&#x5BF9;&#x4E16;&#x754C;&#x5750;&#x6807;&#x7CFB;&#x4E5F;&#x53EF;&#x4EE5;&#x76F8;&#x5BF9;&#x7269;&#x4F53;&#x5750;&#x6807;&#x7CFB;&#x3002;</li>
+</ul>
+<p><img src="Inspector-ConstantForce.png" alt="&#x9759;&#x6001;&#x529B;&#x573A;"></p>
+<h2 id="&#x9759;&#x6001;&#x529B;&#x573A;&#x7684;&#x539F;&#x7406;">&#x9759;&#x6001;&#x529B;&#x573A;&#x7684;&#x539F;&#x7406;</h2>
+<ul>
+<li>&#x9759;&#x6001;&#x529B;&#x573A;&#x76F8;&#x5F53;&#x4E8E;&#x6BCF;&#x4E00;&#x5E27;&#x90FD;&#x65BD;&#x52A0;&#x4E00;&#x4E2A;&#x529B;&#x7ED9;Rigidbody&#x3002;</li>
+</ul>
+<pre><code class="lang-CS"><span class="hljs-comment">// &#x7528;rigidbody.AddForce&#x6A21;&#x62DF;&#x9759;&#x6001;&#x529B;&#x573A;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">FixedUpdate</span>(<span class="hljs-params"></span>) </span>{
+  rigidbody.AddForce(Vector3.up * <span class="hljs-number">2</span>);
+}
+</code></pre>
 
                     
                     </section>
@@ -809,10 +1019,10 @@
         </div>
 
         
-        <a href="../3DMath/readme.html" class="navigation navigation-prev " aria-label="Previous page: 3D数学基础"><i class="fa fa-angle-left"></i></a>
+        <a href="../Physics/rigidbody.html" class="navigation navigation-prev " aria-label="Previous page: 刚体 Rigidbody"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../UnityClass/monobehaviour.html" class="navigation navigation-next " aria-label="Next page: MonoBehaviour"><i class="fa fa-angle-right"></i></a>
+        <a href="../Physics/collider.html" class="navigation navigation-next " aria-label="Next page: 碰撞体 Collider"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
@@ -822,6 +1032,10 @@
 
     
     <script src="../gitbook/plugins/gitbook-plugin-maxiang/maxiang.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-comment/plugin.js"></script>
     
 
     
@@ -846,7 +1060,7 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"include-codeblock":{},"maxiang":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    var config = {"comment":{"highlightCommented":true},"highlight":{},"include-codeblock":{},"maxiang":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
     gitbook.start(config);
 });
 </script>

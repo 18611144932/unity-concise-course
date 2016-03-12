@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Transform | Unity Source Book</title>
+        <title>帧动画 | Unity Source Book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -45,10 +45,10 @@
         
     
     
-    <link rel="next" href="../UnityClass/translate.html" />
+    <link rel="next" href="../Animate/project-angry-bird.html" />
     
     
-    <link rel="prev" href="../UnityClass/resources.html" />
+    <link rel="prev" href="../Animate/2dgame.html" />
     
 
         <!-- head:end -->
@@ -57,9 +57,9 @@
         <!-- body:start -->
         
     <div class="book"
-        data-level="3.5"
-        data-chapter-title="Transform"
-        data-filepath="UnityClass/transform.md"
+        data-level="6.2"
+        data-chapter-title="帧动画"
+        data-filepath="Animate/animation.md"
         data-basepath=".."
         data-revision="Sun Mar 13 2016 02:24:13 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
@@ -256,7 +256,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.5" data-path="UnityClass/transform.html">
+        <li class="chapter " data-level="3.5" data-path="UnityClass/transform.html">
             
                 
                     <a href="../UnityClass/transform.html">
@@ -579,7 +579,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2" data-path="Animate/animation.html">
+        <li class="chapter active" data-level="6.2" data-path="Animate/animation.html">
             
                 
                     <a href="../Animate/animation.html">
@@ -992,7 +992,61 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="transform">Transform</h1>
+                        <h1 id="&#x5E27;&#x52A8;&#x753B;">&#x5E27;&#x52A8;&#x753B;</h1>
+<h2 id="&#x5E27;&#x52A8;&#x753B;&#x7684;&#x539F;&#x7406;">&#x5E27;&#x52A8;&#x753B;&#x7684;&#x539F;&#x7406;</h2>
+<ul>
+<li><code>Sprite Renderer</code>&#x7EC4;&#x4EF6;&#x7684;<code>Sprite</code>&#x5C5E;&#x6027;&#x7528;&#x6765;&#x786E;&#x5B9A;&#x5F53;&#x524D;&#x663E;&#x793A;&#x7684;&#x56FE;&#x7247;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4E0D;&#x505C;&#x7684;&#x4FEE;&#x6539;<code>Sprite</code>&#x5C5E;&#x6027;&#xFF0C;&#x56FE;&#x7247;&#x4E0D;&#x505C;&#x7684;&#x6362;&#x5C31;&#x4F1A;&#x52A8;&#x8D77;&#x6765;&#xFF0C;&#x548C;&#x52A8;&#x753B;&#x7247;&#x7684;&#x539F;&#x7406;&#x4E00;&#x6837;&#x3002;</li>
+<li>&#x53EF;&#x4EE5;&#x7528;&#x4EE3;&#x7801;&#x5FEB;&#x901F;&#x7684;&#x4FEE;&#x6539;&#x4EFB;&#x610F;&#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4F46;Unity&#x63D0;&#x4F9B;&#x4E86;&#x4E13;&#x95E8;&#x7684;&#x5E27;&#x52A8;&#x753B;&#x6765;&#x505A;&#x8FD9;&#x4EF6;&#x4E8B;&#x3002;</li>
+</ul>
+<h2 id="&#x6DFB;&#x52A0;&#x52A8;&#x753B;">&#x6DFB;&#x52A0;&#x52A8;&#x753B;</h2>
+<ol>
+<li><p>&#x5728;Window&#x83DC;&#x5355;&#x4E2D;&#x9009;&#x62E9;Animation&#x53EF;&#x4EE5;&#x6253;&#x5F00;&#x5E27;&#x52A8;&#x753B;&#x7F16;&#x8F91;&#x5668;&#x3002;
+&#xFF3B;&#x622A;&#x56FE;&#xFF3D;</p>
+</li>
+<li><p>&#x9009;&#x4E2D;&#x8981;&#x6DFB;&#x52A0;&#x52A8;&#x753B;&#x7684;&#x6E38;&#x620F;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x70B9;&#x51FB;&#x5E27;&#x52A8;&#x753B;&#x7F16;&#x8F91;&#x5668;&#x4E2D;&#x7684;&#x6DFB;&#x52A0;&#x52A8;&#x753B;&#x66F2;&#x7EBF;&#x6309;&#x94AE;&#x3002;</p>
+<blockquote>
+<ul>
+<li>&#x6DFB;&#x52A0;&#x66F2;&#x7EBF;&#x524D;&#x5148;&#x9009;&#x4E2D;&#x8BE5;&#x5BF9;&#x8C61;&#xFF0C;&#x4EE5;&#x660E;&#x786E;&#x662F;&#x5728;&#x7ED9;&#x8C01;&#x6DFB;&#x52A0;&#x52A8;&#x753B;&#x3002;</li>
+<li>&#x66F2;&#x7EBF;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x67D0;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x67D0;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x4E0D;&#x540C;&#x65F6;&#x95F4;&#x70B9;&#x7684;&#x503C;&#x3002;</li>
+</ul>
+</blockquote>
+</li>
+<li><p>&#x9009;&#x62E9;&#x8981;&#x4FEE;&#x6539;&#x7684;&#x7EC4;&#x4EF6;&#x5C5E;&#x6027;&#x3002;&#x6BD4;&#x5982;<code>Sprite Renderer</code>&#x7EC4;&#x4EF6;&#x7684;<code>Sprite</code>&#x5C5E;&#x6027;&#x3002;</p>
+<blockquote>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x6B21;&#x6DFB;&#x52A0;&#x66F2;&#x7EBF;&#x65F6;&#xFF0C;Unity&#x4F1A;&#x521B;&#x5EFA;&#x52A8;&#x753B;&#x72B6;&#x6001;&#x673A;&#x548C;&#x52A8;&#x753B;&#xFF0C;&#x70B9;&#x786E;&#x5B9A;&#x5C31;&#x884C;&#xFF0C;&#x5177;&#x4F53;&#x5185;&#x5BB9;&#x540E;&#x9762;&#x7AE0;&#x8282;&#x8BB2;&#x89E3;&#x3002;</li>
+</ul>
+</blockquote>
+</li>
+<li><p>&#x5728;&#x65F6;&#x95F4;&#x6761;&#x4E0A;&#x9009;&#x62E9;&#x51E0;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#xFF0C;&#x5C06;<code>Sprite</code> &#x56FE;&#x7247;&#x62D6;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x65F6;&#x95F4;&#x5E27;&#x4E0A;&#x3002;</p>
+<blockquote>
+<ul>
+<li>&#x5982;&#x679C;&#x662F;&#x6570;&#x503C;&#xFF0C;&#x5173;&#x952E;&#x5E27;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;Unity&#x4F1A;&#x4F7F;&#x7528;&#x8865;&#x95F4;&#x8FD0;&#x7B97;&#x586B;&#x5145;&#x3002;
+&#xFF3B;&#x622A;&#x56FE;&#xFF3D;</li>
+</ul>
+</blockquote>
+</li>
+<li><p>&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x9884;&#x89C8;&#x6309;&#x94AE;&#x8FDB;&#x884C;&#x52A8;&#x753B;&#x9884;&#x89C8;&#x3002;</p>
+</li>
+<li>&#x52A8;&#x753B;&#x7684;&#x91C7;&#x6837;&#x7387;sample&#x8868;&#x793A;&#x6BCF;&#x79D2;&#x64AD;&#x653E;&#x591A;&#x5C11;&#x5E27;&#x52A8;&#x753B;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x52A8;&#x753B;&#x7684;&#x91C7;&#x6837;&#x7387;&#x6765;&#x52A8;&#x753B;&#x64AD;&#x653E;&#x7684;&#x5FEB;&#x6162;&#x3002;&#x52A8;&#x753B;&#x7684;&#x91C7;&#x6837;&#x7387;&#x8D8A;&#x5927;&#x52A8;&#x753B;&#x64AD;&#x653E;&#x7684;&#x8D8A;&#x5FEB;&#x3002;</li>
+</ol>
+<blockquote>
+<p>&#x540C;&#x6B65;&#x6848;&#x4F8B;&#xFF1A;&#x6DFB;&#x52A0;&#x5C0F;&#x9E1F;&#x8868;&#x60C5;&#x52A8;&#x753B;</p>
+</blockquote>
+<h2 id="&#x6DFB;&#x52A0;&#x591A;&#x6761;&#x52A8;&#x753B;&#x66F2;&#x7EBF;">&#x6DFB;&#x52A0;&#x591A;&#x6761;&#x52A8;&#x753B;&#x66F2;&#x7EBF;</h2>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x6DFB;&#x52A0;&#x591A;&#x6761;&#x52A8;&#x753B;&#x66F2;&#x7EBF;&#xFF0C;&#x6BD4;&#x5982;&#x505A;&#x4E00;&#x4E2A;&#x8FB9;&#x79FB;&#x52A8;&#x8FB9;&#x6253;&#x6EDA;&#x8FB9;&#x505A;&#x8868;&#x60C5;&#x7684;&#x52A8;&#x753B;&#x3002;</li>
+</ul>
+<h2 id="&#x5F55;&#x5236;&#x52A8;&#x753B;">&#x5F55;&#x5236;&#x52A8;&#x753B;</h2>
+<ol>
+<li>&#x70B9;&#x51FB;&#x5F55;&#x5236;&#x6309;&#x94AE; &#xFF3B;&#x622A;&#x56FE;&#xFF3D;</li>
+<li>&#x5728;&#x65F6;&#x95F4;&#x8F74;&#x4E0A;&#x9009;&#x62E9;&#x5173;&#x952E;&#x5E27;&#x4F4D;&#x7F6E;</li>
+<li>&#x5728;Scene&#x9762;&#x677F;&#x4E2D;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x4F1A;&#x5728;&#x4F60;&#x9009;&#x4E2D;&#x7684;&#x5173;&#x952E;&#x5E27;&#x4F4D;&#x7F6E;&#x6DFB;&#x4E0A;&#x4F60;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x6570;&#x636E;&#x3002;</li>
+</ol>
+<blockquote>
+<p>&#x540C;&#x6B65;&#x6848;&#x4F8B;&#xFF1A;&#x98DE;&#x7FD4;&#x7684;&#x5C0F;&#x9E1F;</p>
+</blockquote>
 
                     
                     </section>
@@ -1003,10 +1057,10 @@
         </div>
 
         
-        <a href="../UnityClass/resources.html" class="navigation navigation-prev " aria-label="Previous page: Resources"><i class="fa fa-angle-left"></i></a>
+        <a href="../Animate/2dgame.html" class="navigation navigation-prev " aria-label="Previous page: 2D游戏开发"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../UnityClass/translate.html" class="navigation navigation-next " aria-label="Next page: 移动"><i class="fa fa-angle-right"></i></a>
+        <a href="../Animate/project-angry-bird.html" class="navigation navigation-next " aria-label="Next page: 项目实战-愤怒的小鸟"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Transform | Unity Source Book</title>
+        <title>2D游戏开发 | Unity Source Book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -45,10 +45,10 @@
         
     
     
-    <link rel="next" href="../UnityClass/translate.html" />
+    <link rel="next" href="../Animate/animation.html" />
     
     
-    <link rel="prev" href="../UnityClass/resources.html" />
+    <link rel="prev" href="../Animate/readme.html" />
     
 
         <!-- head:end -->
@@ -57,9 +57,9 @@
         <!-- body:start -->
         
     <div class="book"
-        data-level="3.5"
-        data-chapter-title="Transform"
-        data-filepath="UnityClass/transform.md"
+        data-level="6.1"
+        data-chapter-title="2D游戏开发"
+        data-filepath="Animate/2dgame.md"
         data-basepath=".."
         data-revision="Sun Mar 13 2016 02:24:13 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
@@ -256,7 +256,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.5" data-path="UnityClass/transform.html">
+        <li class="chapter " data-level="3.5" data-path="UnityClass/transform.html">
             
                 
                     <a href="../UnityClass/transform.html">
@@ -564,7 +564,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="6.1" data-path="Animate/2dgame.html">
+        <li class="chapter active" data-level="6.1" data-path="Animate/2dgame.html">
             
                 
                     <a href="../Animate/2dgame.html">
@@ -992,7 +992,62 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="transform">Transform</h1>
+                        <h1 id="2d&#x6E38;&#x620F;&#x5F00;&#x53D1;">2D&#x6E38;&#x620F;&#x5F00;&#x53D1;</h1>
+<p>&#x4ECE;&#x6700;&#x7B80;&#x5355;&#x7684;2D&#x52A8;&#x753B;&#x8BB2;&#x8D77;&#xFF0C;&#x8FD9;&#x91CC;&#x5148;&#x4E86;&#x89E3;&#x4E0B;2D&#x6E38;&#x620F;&#x5F00;&#x53D1;&#x3002;</p>
+<h2 id="2d&#x6E38;&#x620F;&#x73AF;&#x5883;&#x8BBE;&#x7F6E;">2D&#x6E38;&#x620F;&#x73AF;&#x5883;&#x8BBE;&#x7F6E;</h2>
+<p>&#x5728;&#x521B;&#x5EFA;2D&#x6E38;&#x620F;&#x9879;&#x76EE;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x9879;&#x76EE;&#x7C7B;&#x578B;&#x4E3A;2D&#x3002;&#x8FD9;&#x65F6;Unity&#x4F1A;&#x5E2E;&#x4F60;&#x505A;&#x4EE5;&#x4E0B;&#x51E0;&#x4EF6;&#x4E8B;&#xFF1A;</p>
+<ul>
+<li>&#x5C06;<code>Project Setting - Editor - Default Behaviour Mode</code>&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x6A21;&#x5F0F;&#x8BBE;&#x7F6E;&#x4E3A;2D&#x3002;</li>
+</ul>
+<p>[&#x622A;&#x56FE;]</p>
+<ul>
+<li>&#x5C06;Scene&#x9762;&#x677F;&#x4E2D;&#x7684;&#x89C6;&#x89D2;&#x8BBE;&#x7F6E;&#x4E3A;2D&#xFF0C;&#x53EA;&#x4F7F;&#x7528;x&#x548C;y&#x8F74;&#x3002;</li>
+</ul>
+<p>[&#x622A;&#x56FE;]</p>
+<ul>
+<li>&#x5C06;&#x6444;&#x50CF;&#x673A;&#x8BBE;&#x4E3A;&#x6B63;&#x7126;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x4F1A;&#x56E0;&#x4E3A;&#x7269;&#x4F53;&#x79BB;&#x6444;&#x50CF;&#x673A;&#x7684;&#x8FDC;&#x8FD1;&#x800C;&#x6539;&#x53D8;&#x5927;&#x5C0F;&#x3002;</li>
+</ul>
+<p>[&#x622A;&#x56FE;]</p>
+<h2 id="sprite-&#x7CBE;&#x7075;">Sprite &#x7CBE;&#x7075;</h2>
+<ul>
+<li>2D&#x6E38;&#x620F;&#x4E2D;&#x6E38;&#x620F;&#x5BF9;&#x8C61;&#x7684;&#x4E3B;&#x8981;&#x5C55;&#x73B0;&#x65B9;&#x5F0F;&#x662F;&#x56FE;&#x7247;&#x3002;</li>
+<li><code>Sprite Renderer</code>&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x4F7F;&#x4E00;&#x4E2A;&#x6E38;&#x620F;&#x7269;&#x4F53;&#x663E;&#x793A;&#x4E3A;&#x4E00;&#x5F20;&#x56FE;&#x7247;&#x3002;</li>
+<li><code>Sprite Renderer</code>&#x53EA;&#x80FD;&#x5C55;&#x73B0;&#x6750;&#x8D28;&#x7C7B;&#x578B;<code>Texture Type</code>&#x4E3A;&#x7CBE;&#x7075;<code>Sprite</code>&#x7684;&#x56FE;&#x7247;&#x3002;</li>
+<li>&#x53EF;&#x4EE5;&#x5C06;<code>Sprite</code>&#x7C7B;&#x578B;&#x7684;&#x56FE;&#x7247;&#x76F4;&#x63A5;&#x62D6;&#x52A8;&#x5C42;&#x6B21;&#x9762;&#x677F;&#x6216;&#x8005;&#x573A;&#x666F;&#x9762;&#x677F;&#x4E2D;&#x3002;</li>
+</ul>
+<h2 id="&#x7F16;&#x8F91;&#x591A;&#x56FE;&#x7CBE;&#x7075;">&#x7F16;&#x8F91;&#x591A;&#x56FE;&#x7CBE;&#x7075;</h2>
+<ul>
+<li>&#x52A8;&#x753B;&#x662F;&#x4E00;&#x7EC4;&#x753B;&#x9762;&#x7684;&#x5FEB;&#x901F;&#x5207;&#x6362;&#x3002;&#x7F8E;&#x672F;&#x901A;&#x5E38;&#x5C06;&#x8FD9;&#x7EC4;&#x753B;&#x9762;&#x505A;&#x5728;&#x4E00;&#x5F20;&#x56FE;&#x7247;&#x4E2D;&#x3002;</li>
+<li>&#x5728;&#x56FE;&#x7247;&#x6750;&#x8D28;&#x9009;&#x9879;&#x4E2D;&#x8BBE;&#x7F6E;&#x6750;&#x8D28;&#x7C7B;&#x578B;<code>Texture Type</code>&#x4E3A;<code>Sprite</code>&#xFF0C;&#x7CBE;&#x7075;&#x7C7B;&#x578B;<code>Sprite Mode</code>&#x4E3A;<code>Multiple</code>&#x591A;&#x56FE;&#x3002;</li>
+</ul>
+<p>&#xFF3B;&#x622A;&#x56FE;&#xFF3D;</p>
+<ul>
+<li>&#x70B9;&#x51FB;Sprite Editor &#x53EF;&#x4EE5;&#x5207;&#x5272;&#x56FE;&#x7247;&#x3002;</li>
+<li>&#x5207;&#x5272;&#x56FE;&#x7247;&#x65F6;&#x6BCF;&#x5F20;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;&#x5927;&#x5C0F;&#x5E94;&#x8BE5;&#x4E00;&#x81F4;&#xFF0C;&#x4EE5;&#x9632;&#x6B62;&#x64AD;&#x653E;&#x52A8;&#x753B;&#x65F6;&#x6296;&#x52A8;&#x3002;</li>
+</ul>
+<h2 id="&#x5207;&#x5272;&#x591A;&#x56FE;&#x7CBE;&#x7075;">&#x5207;&#x5272;&#x591A;&#x56FE;&#x7CBE;&#x7075;</h2>
+<ul>
+<li>&#x624B;&#x52A8;&#x5207;&#x5272;&#x56FE;&#x7247;&#x3002;&#x76F4;&#x63A5;&#x6846;&#x9009;&#x6BCF;&#x5F20;&#x56FE;&#x7247;&#x7684;&#x8303;&#x56F4;&#x5C31;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x5207;&#x5272;&#x56FE;&#x7247;&#x3002;</li>
+<li>&#x81EA;&#x52A8;&#x5207;&#x5272;&#x56FE;&#x7247;&#x3002;&#x9009;&#x62E9;Sprite Editor&#x5DE6;&#x4E0A;&#x89D2;&#x7684;Slice&#x6309;&#x94AE;&#xFF0C;&#x8BBE;&#x7F6E;Type&#x4E3A;Automatic&#xFF0C;&#x70B9;&#x51FB;Slice&#x6309;&#x94AE;&#xFF0C;SpriteEditor&#x5C31;&#x4F1A;&#x6CBF;&#x7740;&#x6BCF;&#x5F20;&#x56FE;&#x7247;&#x7684;&#x8FB9;&#x6CBF;&#x5207;&#x51FA;&#x56FE;&#x7247;&#x3002;</li>
+</ul>
+<p>&#xFF3B;&#x622A;&#x56FE;&#xFF3D;</p>
+<ul>
+<li>&#x7F51;&#x683C;&#x5207;&#x5272;&#x56FE;&#x7247;&#x3002;&#x9009;&#x62E9;Sprite Editor&#x5DE6;&#x4E0A;&#x89D2;&#x7684;Slice&#x6309;&#x94AE;&#xFF0C;&#x8BBE;&#x7F6E;Type&#x4E3A;Grid&#xFF0C;&#x70B9;&#x51FB;Slice&#x6309;&#x94AE;&#xFF0C;SpriteEditor&#x5C31;&#x4F1A;&#x6309;&#x6307;&#x5B9A;&#x7684;&#x5927;&#x5C0F;&#x5C06;&#x56FE;&#x7247;&#x5206;&#x5272;&#x6210;&#x89C4;&#x5219;&#x7F51;&#x683C;&#x6392;&#x5E03;&#x7684;&#x5C0F;&#x56FE;&#x3002;</li>
+</ul>
+<p>&#xFF3B;&#x622A;&#x56FE;&#xFF3D;</p>
+<h2 id="2d&#x7EC4;&#x4EF6;">2D&#x7EC4;&#x4EF6;</h2>
+<p>2D&#x6E38;&#x620F;&#x901A;&#x5E38;&#x8981;&#x4F7F;&#x7528;2D&#x7EC4;&#x4EF6;&#xFF0C;2D&#x7684;&#x94A2;&#x4F53;&#x4E0E;3D&#x7684;&#x78B0;&#x649E;&#x4F53;&#x662F;&#x4E0D;&#x80FD;&#x76F8;&#x4E92;&#x4F5C;&#x7528;&#x7684;&#x3002;&#x7528;&#x6CD5;&#x4E0A;2D&#x7EC4;&#x4EF6;&#x548C;&#x5BF9;&#x5E94;&#x7684;3D&#x7EC4;&#x4EF6;&#x76F8;&#x4F3C;&#x3002;</p>
+<ul>
+<li>2D&#x94A2;&#x4F53; <code>Rigidbody2D</code>&#x3002;</li>
+<li>2D&#x78B0;&#x649E;&#x4F53; <code>Collider2D</code>&#x3002;</li>
+<li>2D&#x7269;&#x7406;&#x6750;&#x8D28; <code>Physical Material 2D</code>&#x3002;</li>
+<li>2D&#x78B0;&#x649E;&#x68C0;&#x6D4B;&#x4F7F;&#x7528; <code>OnCollisionXXX2D</code>&#x3001;<code>OnTiggerXXX2D</code>&#x3002;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x53C2;&#x6570;&#x5206;&#x522B;&#x662F;<code>Collision2D</code>&#x3001;<code>Collider2D</code>&#x3002;</li>
+<li>2D&#x5C04;&#x7EBF;&#x3002;</li>
+</ul>
+<h2 id="&#x76F8;&#x5173;&#x53C2;&#x8003;">&#x76F8;&#x5173;&#x53C2;&#x8003;</h2>
+<ul>
+<li>2D&#x5C04;&#x7EBF;</li>
+</ul>
 
                     
                     </section>
@@ -1003,10 +1058,10 @@
         </div>
 
         
-        <a href="../UnityClass/resources.html" class="navigation navigation-prev " aria-label="Previous page: Resources"><i class="fa fa-angle-left"></i></a>
+        <a href="../Animate/readme.html" class="navigation navigation-prev " aria-label="Previous page: 动作系统"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../UnityClass/translate.html" class="navigation navigation-next " aria-label="Next page: 移动"><i class="fa fa-angle-right"></i></a>
+        <a href="../Animate/animation.html" class="navigation navigation-next " aria-label="Next page: 帧动画"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
