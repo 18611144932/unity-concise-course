@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>GameObject与Component的关系 | Unity Source Book</title>
+        <title>角色控制器 Character Controller | Unity Source Book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -45,10 +45,10 @@
         
     
     
-    <link rel="next" href="../Summary/Lerp.html" />
+    <link rel="next" href="../Physics/project-3d-hit-plane.html" />
     
     
-    <link rel="prev" href="../Summary/vector3forwardtransformforwardyu_wu_ti_zuo_biao_xi.html" />
+    <link rel="prev" href="../Physics/joint.html" />
     
 
         <!-- head:end -->
@@ -57,9 +57,9 @@
         <!-- body:start -->
         
     <div class="book"
-        data-level="15.10"
-        data-chapter-title="GameObject与Component的关系"
-        data-filepath="Summary/gameobjectyu_component_de_guan_xi.md"
+        data-level="5.7"
+        data-chapter-title="角色控制器 Character Controller"
+        data-filepath="Physics/character_controller.md"
         data-basepath=".."
         data-revision="Tue Mar 15 2016 00:00:22 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
@@ -528,7 +528,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.7" data-path="Physics/character_controller.html">
+        <li class="chapter active" data-level="5.7" data-path="Physics/character_controller.html">
             
                 
                     <a href="../Physics/character_controller.html">
@@ -919,7 +919,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="15.10" data-path="Summary/gameobjectyu_component_de_guan_xi.html">
+        <li class="chapter " data-level="15.10" data-path="Summary/gameobjectyu_component_de_guan_xi.html">
             
                 
                     <a href="../Summary/gameobjectyu_component_de_guan_xi.html">
@@ -1015,9 +1015,93 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="gameobject&#x4E0E;component&#x7684;&#x5173;&#x7CFB;">GameObject&#x4E0E;Component&#x7684;&#x5173;&#x7CFB;</h1>
+                        <h1 id="&#x89D2;&#x8272;&#x63A7;&#x5236;&#x5668;-character-controller">&#x89D2;&#x8272;&#x63A7;&#x5236;&#x5668; Character Controller</h1>
 <ul>
-<li>&#x4E3A;&#x4EC0;&#x4E48;MonoBehaviour &#x3001;Transform&#x3001;GameObject &#x90FD;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x5E38;&#x7528;&#x7EC4;&#x4EF6;&#x3002;</li>
+<li>&#x5927;&#x591A;&#x6570;&#x7B2C;&#x4E00;&#x4EBA;&#x79F0;&#x3001;&#x7B2C;&#x4E09;&#x4EBA;&#x79F0;&#x6E38;&#x620F;&#x4E2D;&#x90FD;&#x4E0D;&#x662F;&#x4F7F;&#x7528;&#x7ED9;&#x94A2;&#x4F53;&#x65BD;&#x52A0;&#x529B;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x63A7;&#x5236;&#x4E3B;&#x89D2;&#x8FD0;&#x52A8;&#x7684;&#x3002;</li>
+<li>&#x89D2;&#x8272;&#x63A7;&#x5236;&#x5668;&#x4E13;&#x95E8;&#x7528;&#x6765;&#x63A7;&#x5236;&#x4E3B;&#x89D2;&#x7684;&#x52A8;&#x529B;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x4E0D;&#x4F7F;&#x7528;&#x94A2;&#x4F53;&#x3002;</li>
+<li>&#x89D2;&#x8272;&#x63A7;&#x5236;&#x5668;&#x53EF;&#x4EE5;&#x6A21;&#x62DF;&#x91CD;&#x529B;&#x3002;</li>
+<li>&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x7269;&#x7406;&#x4F5C;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#x5F71;&#x54CD;&#x89D2;&#x8272;&#x63A7;&#x5236;&#x5668;&#x3002;</li>
+</ul>
+<h2 id="&#x89D2;&#x8272;&#x63A7;&#x5236;&#x5668;&#x7684;&#x5C5E;&#x6027;">&#x89D2;&#x8272;&#x63A7;&#x5236;&#x5668;&#x7684;&#x5C5E;&#x6027;</h2>
+<ul>
+<li><code>Height</code>&#x89D2;&#x8272;&#x7684;&#x9AD8;&#x5EA6;&#xFF0C;&#x901A;&#x5E38;&#x548C;&#x73B0;&#x5B9E;&#x4E2D;&#x7684;&#x4EBA;&#x7269;&#x4E00;&#x6837;&#x8BBE;&#x7F6E;&#x4E3A;2&#x7C73;&#x5DE6;&#x53F3;&#x3002;</li>
+<li><code>Radius</code>&#x89D2;&#x8272;&#x7684;&#x534A;&#x5F84;&#xFF0C;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x4EBA;&#x7269;&#x7684;&#x80D6;&#x7626;&#x3002;</li>
+<li><code>Center</code>&#x8BBE;&#x7F6E;&#x89D2;&#x8272;&#x4E2D;&#x5FC3;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</li>
+<li><code>Slope Limit</code>&#x9650;&#x5236;&#x89D2;&#x8272;&#x80FD;&#x722C;&#x7684;&#x6700;&#x5927;&#x5761;&#x5EA6;&#x3002;&#x901A;&#x5E38;&#x8BBE;&#x7F6E;&#x4E3A;90&#x5EA6;&#x4EE5;&#x4E0B;&#xFF0C;&#x8FD9;&#x6837;&#x89D2;&#x8272;&#x5C31;&#x4E0D;&#x4F1A;&#x8D70;&#x5230;&#x5899;&#x4E0A;&#x3002;</li>
+<li><code>Step Offset</code>&#x79FB;&#x52A8;&#x6B65;&#x957F;&#x3002;&#x901A;&#x5E38;2&#x7C73;&#x5DE6;&#x53F3;&#x7684;&#x4EBA;&#x79FB;&#x52A8;&#x6B65;&#x957F;&#x8BBE;&#x7F6E;&#x5728;0.1&#x5230;0.4&#x7C73;.</li>
+<li><code>Skin Width</code>&#x76AE;&#x80A4;&#x539A;&#x5EA6;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x592A;&#x5C0F;&#x89D2;&#x8272;&#x5BB9;&#x6613;&#x88AB;&#x5361;&#x4F4F;&#xFF0C;&#x592A;&#x5927;&#x89D2;&#x8272;&#x5BB9;&#x6613;&#x6296;&#x52A8;&#x3002;&#x901A;&#x5E38;&#x5C06;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x8BBE;&#x4E3A;0.01&#x5230;&#x89D2;&#x8272;&#x534A;&#x5F84;&#x7684;10%&#x4E4B;&#x95F4;&#x3002;</li>
+<li><code>Min Move Distance</code>&#x6700;&#x5C0F;&#x79FB;&#x52A8;&#x8DDD;&#x79BB;&#x3002;&#x5B98;&#x65B9;&#x63A8;&#x8350;&#x628A;&#x8FD9;&#x4E2A;&#x503C;&#x8BBE;&#x4E3A;0&#x3002;</li>
+</ul>
+<p><img src="Inspector-CharacterController.png" alt="Inspector-CharacterController"></p>
+<ul>
+<li><code>isGrounded</code>&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x89D2;&#x8272;&#x5F53;&#x524D;&#x662F;&#x5426;&#x5728;&#x5730;&#x9762;&#x3002;</li>
+<li><code>velocity</code>&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x89D2;&#x8272;&#x5F53;&#x524D;&#x7684;&#x901F;&#x5EA6;&#x5411;&#x91CF;&#x3002;</li>
+</ul>
+<h2 id="&#x89D2;&#x8272;&#x63A7;&#x5236;&#x5668;&#x7684;&#x65B9;&#x6CD5;">&#x89D2;&#x8272;&#x63A7;&#x5236;&#x5668;&#x7684;&#x65B9;&#x6CD5;</h2>
+<p>&#x6709;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x63A7;&#x5236;&#x89D2;&#x8272;&#x79FB;&#x52A8;&#xFF1A;</p>
+<ul>
+<li><code>SimpleMove</code>&#x65B9;&#x6CD5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;<strong>&#x901F;&#x5EA6;</strong>&#x53C2;&#x6570;&#x63A7;&#x5236;&#x89D2;&#x8272;&#x79FB;&#x52A8;&#x3002;</li>
+</ul>
+<pre><code class="lang-CS"><span class="hljs-keyword">using</span> UnityEngine;
+<span class="hljs-keyword">using</span> System.Collections;
+
+[RequireComponent(<span class="hljs-keyword">typeof</span>(CharacterController))]
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">ExampleClass</span> : <span class="hljs-title">MonoBehaviour</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">float</span> speed = <span class="hljs-number">3.0</span>F;
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>(<span class="hljs-params"></span>) </span>{
+        CharacterController controller = GetComponent&lt;CharacterController&gt;();
+
+        <span class="hljs-keyword">float</span> v = Input.GetAxis(<span class="hljs-string">&quot;Vertical&quot;</span>);
+        controller.SimpleMove(transform.forward * speed * v);
+    }
+}
+</code></pre>
+<ul>
+<li><code>Move</code>&#x65B9;&#x6CD5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;<strong>&#x589E;&#x91CF;</strong>&#x53C2;&#x6570;&#x63A7;&#x5236;&#x89D2;&#x8272;&#x79FB;&#x52A8;&#x3002;</li>
+</ul>
+<pre><code class="lang-CS"><span class="hljs-comment">//&#x7528;&#x7BAD;&#x5934;&#x952E;&#x63A7;&#x5236;&#x89D2;&#x8272;&#x79FB;&#x52A8;&#xFF0C;&#x5F53;&#x6309;&#x4E0B;&#x7A7A;&#x683C;&#x952E;&#x65F6;&#x8DF3;&#x8D77;&#x3002;</span>
+<span class="hljs-keyword">using</span> UnityEngine;
+<span class="hljs-keyword">using</span> System.Collections;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">ExampleClass</span> : <span class="hljs-title">MonoBehaviour</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">float</span> speed = <span class="hljs-number">6.0</span>F;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">float</span> jumpSpeed = <span class="hljs-number">8.0</span>F;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">float</span> gravity = <span class="hljs-number">20.0</span>F;
+    <span class="hljs-keyword">private</span> Vector3 moveDirection = Vector3.zero;
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>(<span class="hljs-params"></span>) </span>{
+        CharacterController controller = GetComponent&lt;CharacterController&gt;();
+        <span class="hljs-keyword">if</span> (controller.isGrounded) {
+            <span class="hljs-comment">//&#x6211;&#x4EEC;&#x7740;&#x5730;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x8F74;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;moveDirection&#x3002;</span>
+            moveDirection = <span class="hljs-keyword">new</span> Vector3(Input.GetAxis(<span class="hljs-string">&quot;Horizontal&quot;</span>), <span class="hljs-number">0</span>, Input.GetAxis(<span class="hljs-string">&quot;Vertical&quot;</span>));
+            moveDirection = transform.TransformDirection(moveDirection);
+            moveDirection *= speed;
+
+            <span class="hljs-comment">// &#x8DF3;&#x8DC3;</span>
+            <span class="hljs-keyword">if</span> (Input.GetButton(<span class="hljs-string">&quot;Jump&quot;</span>))
+                moveDirection.y = jumpSpeed;
+        }
+
+        <span class="hljs-comment">//Move&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5199;&#x91CD;&#x529B;&#x6548;&#x679C;</span>
+        moveDirection.y -= gravity * Time.deltaTime;
+
+        <span class="hljs-comment">//&#x79FB;&#x52A8;&#x63A7;&#x5236;&#x5668;</span>
+        controller.Move(moveDirection * Time.deltaTime);
+    }
+}
+</code></pre>
+<ul>
+<li>&#x8C03;&#x7528;<code>SimpleMove</code>&#x65F6;Y&#x8F74;&#x4E0A;&#x901F;&#x5EA6;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x81EA;&#x52A8;&#x5E94;&#x7528;&#x91CD;&#x529B;&#x6548;&#x679C;&#x3002;</li>
+<li>&#x8C03;&#x7528;<code>Move</code>&#x65F6;&#x91CD;&#x529B;&#x6548;&#x679C;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5199;&#x3002;</li>
+<li>&#x5EFA;&#x8BAE;&#x6BCF;&#x5E27;&#x53EA;&#x8C03;&#x7528;&#x4E00;&#x6B21;<code>Move</code>&#x6216;&#x8005;<code>SimpleMove</code>&#x3002; </li>
+</ul>
+<h2 id="&#x78B0;&#x649E;&#x68C0;&#x6D4B;">&#x78B0;&#x649E;&#x68C0;&#x6D4B;</h2>
+<ul>
+<li>&#x89D2;&#x8272;&#x63A7;&#x5236;&#x5668;&#x901A;&#x5E38;&#x4E0D;&#x52A0;&#x94A2;&#x4F53;&#xFF0C;&#x5E38;&#x89C4;&#x7684;&#x78B0;&#x649E;&#x68C0;&#x6D4B;&#x4E2D;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x65B9;&#x8981;&#x52A0;&#x94A2;&#x4F53;&#xFF0C;&#x56E0;&#x6B64;<code>OnCollisionXXX</code>&#x548C;<code>OnTriggerXXX</code>&#x53EF;&#x80FD;&#x68C0;&#x6D4B;&#x4E0D;&#x5230;&#x78B0;&#x649E;&#x3002;</li>
+<li>&#x89D2;&#x8272;&#x63A7;&#x5236;&#x5668;&#x6709;&#x4E13;&#x95E8;&#x7684;&#x78B0;&#x649E;&#x68C0;&#x6D4B;&#x65B9;&#x6CD5;<code>OnControllerColliderHit</code>&#x3002;</li>
+<li>&#x89D2;&#x8272;&#x63A7;&#x5236;&#x5668;&#x4E0D;&#x80FD;&#x5C06;&#x94A2;&#x4F53;&#x63A8;&#x5F00;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x505A;&#x8FD9;&#x4EF6;&#x4E8B;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>OnControllerColliderHit</code>&#x3002;</li>
+<li>&#x5728;&#x4F7F;&#x7528;<code>Move</code>&#x65B9;&#x6CD5;&#x79FB;&#x52A8;&#x65F6;&#xFF0C;<code>collisionFlags</code>&#x5C5E;&#x6027;&#x80FD;&#x6307;&#x660E;&#x662F;&#x54EA;&#x4E2A;&#x90E8;&#x5206;&#x53D1;&#x751F;&#x4E86;&#x78B0;&#x649E;&#x3002;</li>
 </ul>
 
                     
@@ -1029,10 +1113,10 @@
         </div>
 
         
-        <a href="../Summary/vector3forwardtransformforwardyu_wu_ti_zuo_biao_xi.html" class="navigation navigation-prev " aria-label="Previous page: Vector3.forward、transform.forward与坐标系间的联系"><i class="fa fa-angle-left"></i></a>
+        <a href="../Physics/joint.html" class="navigation navigation-prev " aria-label="Previous page: 关节 Joint"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../Summary/Lerp.html" class="navigation navigation-next " aria-label="Next page: 插值与平滑"><i class="fa fa-angle-right"></i></a>
+        <a href="../Physics/project-3d-hit-plane.html" class="navigation navigation-next " aria-label="Next page: 项目实战-3D打飞机"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
